@@ -1,0 +1,26 @@
+@import "../../../../style/abstracts/_mixins";
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  z-index: 90;
+  nav {
+    height: 100%;
+  }
+  &__logo {
+    height: 80%;
+  }
+}
+.desktop__only {
+  @include respma(499) {
+    display: none;
+  }
+}

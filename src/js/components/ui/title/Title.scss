@@ -1,0 +1,17 @@
+@import '../../../../style/abstracts/_mixins';
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  &__summary-income,
+  &__summary-expenses {
+    text-align: center;
+  }
+  &__summary-income {
+    color: var(--income);
+  }
+  &__summary-expenses {
+    color: var(--expenses);
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../../style/abstracts/_mixins';
+
+.logo {
+  background-color: var(--logo-bcg);
+  padding: 0.5rem;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  &__img {
+    height: 100%;
+  }
+}

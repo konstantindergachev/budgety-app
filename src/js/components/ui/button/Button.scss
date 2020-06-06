@@ -1,0 +1,88 @@
+@import '../../../../style/abstracts/_mixins';
+
+.add__btn {
+  align-self: center;
+  border: none;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  background-color: var(--controls-bcg);
+  color: var(--income);
+  width: 1.5625rem;
+  height: 1.5625rem;
+  box-shadow: var(--box-shadow);
+  &:active {
+    box-shadow: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  @include respma(490) {
+    font-size: 0.75rem;
+    box-shadow: var(--box-shadow-490);
+  }
+}
+[tooltip]:hover::after {
+  content: 'Добавить';
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--tooltip-color);
+  top: 0.625rem;
+  right: 1.875rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-tooltip);
+  background-color: var(--controls-bcg);
+}
+.button {
+  display: inline-block;
+  width: auto;
+  background-color: var(--controls-bcg);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  text-transform: uppercase;
+  padding: 0.3125rem;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  @include respma(490) {
+    font-size: 0.75rem;
+    box-shadow: var(--box-shadow-490);
+  }
+  &__order {
+    display: block;
+    margin: 0 auto;
+    opacity: 1;
+    visibility: visible;
+    &-hiden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+.success {
+  color: var(--income);
+}
+
+.danger {
+  color: var(--expenses);
+}
+
+.cancel {
+  @include respmi(960) {
+    position: absolute;
+    top: 10%;
+    left: 0.5%;
+  }
+}

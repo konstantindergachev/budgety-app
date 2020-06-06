@@ -1,0 +1,31 @@
+@import '../../../style/abstracts/_mixins';
+.orders {
+  width: 100%;
+  height: calc(100vh - var(--footer-height));
+  margin-top: var(--header-height);
+  overflow: auto;
+  &__container {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include respma(960) {
+      justify-content: center;
+    }
+  }
+  &__error {
+    margin: 80px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: var(--box-shadow-error);
+    border: var(--border-box-error);
+    padding: 0.625rem;
+    box-sizing: border-box;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--error);
+    cursor: pointer;
+  }
+}

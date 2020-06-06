@@ -1,0 +1,35 @@
+@import '../../../../style/abstracts/_mixins';
+
+.summary__item {
+  width: 75%;
+  border-radius: 5px;
+  display: flex;
+  margin: 0 auto;
+  background-color: var(--list-bcg);
+  padding: 0.625rem;
+  &:hover {
+    .summary__del {
+      transition: all .3s ease-out;
+      cursor: pointer;
+      display: block;
+    }
+  }
+  @include respma(490) {
+    width: 85%;
+    padding: 0.3125rem;
+    font-size: 0.75rem;
+  }
+}
+
+.summary__del {
+  display: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--error);
+  scale: 1.2;
+  @include respma(490) {
+    display: block;
+    scale: 1;
+  }
+}

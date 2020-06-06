@@ -1,0 +1,37 @@
+@import '../../../../../style/abstracts/_mixins';
+.navigation__item {
+  margin: 0.625rem 0;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  @include respmi(500) {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+  }
+}
+
+.navigation__link {
+  color: #8f5c2c;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  @include respmi(500) {
+    color: var(--footer-header-color);
+    height: 100%;
+    padding: 1rem 0.625rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+  &:hover,
+  &:active,
+  &.active {
+    color: var(--menu-active);
+    @include respmi(500) {
+      border-bottom: 0.25rem solid var(--menu-active);
+      color: var(--footer-header-color);
+    }
+  }
+}

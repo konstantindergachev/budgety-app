@@ -1,0 +1,49 @@
+@import '../../../../style/abstracts/_mixins';
+.chart {
+  &__list {
+    box-shadow: var(--box-shadow);
+    padding: 0.625rem;
+    margin: 0.3125rem;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+    background-color: var(--stat-bcg);
+  }
+  &__date {
+    margin-bottom: 0.3125rem;
+    font-style: italic;
+  }
+  &__income {
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      font-weight: 500;
+      border-bottom: 1px solid var(--stat-card-bottom);
+      align-self: flex-start;
+    }
+  }
+  &__expenses {
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.3125rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--expenses);
+    }
+    &-totalPercentage {
+      background-color: var(--expenses);
+      color: var(--total-percent-color);
+      padding: 0 0.1875rem;
+    }
+    &-percentages {
+      border: 1px solid var(--expenses);
+      border-top: none;
+      padding: 0 0.1875rem;
+    }
+  }
+  &__balance {
+    margin-top: 0.3125rem;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../../style/abstracts/_mixins';
+.note {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.75rem;
+  @include respma(350) {
+    margin-bottom: 1.5625rem;
+  }
+  &__select {
+    width: 5%;
+    border: none;
+    border-radius: 0.3125rem;
+    height: 2.75rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: inherit;
+    background-color: var(--controls-bcg);
+    margin-right: 0.625rem;
+    transition: border 0.3s;
+    outline: none;
+    box-shadow: var(--box-shadow);
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    @include respma(490) {
+      width: 10%;
+      font-size: 0.75rem;
+      box-shadow: var(--box-shadow-490);
+    }
+  }
+  &__descr,
+  &__value {
+    padding: 0.75rem 0.9375rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--controls-bcg);
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.875rem;
+    margin-right: 0.625rem;
+    outline: none;
+    box-shadow: var(--box-shadow);
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    @include respma(490) {
+      font-size: 0.75rem;
+      box-shadow: var(--box-shadow-490);
+    }
+  }
+  &__descr {
+    width: 30%;
+  }
+  &__value {
+    width: 7%;
+  }
+}

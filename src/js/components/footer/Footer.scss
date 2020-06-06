@@ -1,0 +1,28 @@
+@import "../../../style/abstracts/_mixins";
+.footer {
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(gray, .075) 1px, transparent 1px), linear-gradient(90deg, rgba(gray, .075) 1px, transparent 1px),
+    linear-gradient(rgba(gray, .075) 1px, transparent 1px), linear-gradient(90deg, rgba(gray, .075) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem, 1.25rem 1.25rem;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  z-index: 90;
+  &__copyright {
+    order: -1;
+    font-weight: 300;
+    color: var(--footer-header-color);
+    margin-left: 3.125rem;
+    flex: 1 0 auto;
+    @include respma(490) {
+      font-size: 0.875rem;
+    }
+    @include respma(350) {
+      font-size: 0.75rem;
+    }
+  }
+}

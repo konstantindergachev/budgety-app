@@ -1,0 +1,12 @@
+@import '../../../style/abstracts/_mixins';
+.content {
+  margin-top: var(--header-height);
+  width: 100%;
+  height: 100vh;
+  @include respma(1130) {
+    height: auto;
+  }
+  @include respma(960) {
+    height: calc(100vh - (var(--footer-height) * 1.4));
+  }
+}

@@ -1,0 +1,50 @@
+﻿/*---------- 'MEDIA QUERY MANAGER' ----------*/
+/*
+Порядок применения/ORDER: base.scss inc typography.scss -> layout folder inc float-grid.scss -> pages folder -> components folder
+
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+200 - 1800px: is where our normal styles apply
+1800px inc : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+600px / 16px = 37.5em
+900px / 16px = 56.25em
+1200px / 16px = 75em
+1800px / 16px = 112.5em
+*/
+
+@mixin respmi($breakpoint) {
+    @media only screen and (min-width: $breakpoint + "px") {
+        @content;
+    }
+}
+
+@mixin respma($breakpoint) {
+    @media only screen and (max-width: $breakpoint + "px") {
+        @content;
+    }
+}
+@mixin respmin($breakpoint1, $breakpoint2) {
+    @media (min-width: $breakpoint1 + "px") and (min-height: $breakpoint2 + "px") {
+        @content;
+    }
+}
+
+@mixin center-position($params) {
+    position: absolute;
+    top: $params;
+    left: $params;
+    transform: translate(-$params, -$params);
+}
+
+%be {
+    font-family: 'Segoe Script';
+}

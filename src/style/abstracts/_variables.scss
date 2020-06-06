@@ -1,0 +1,31 @@
+/*---------- 'Sizes' ----------*/
+:root{
+    --footer-height: 56px;
+    --header-height: 56px;
+    --income: #28b9b5;
+    --expenses: #ff5049;
+    --error: #ff0000;
+    --summary-text: #000000;
+    --footer-header-color: #000000;
+    --menu-active: #40A4C8;
+    --side-bcg: #ffffff;
+    --controls-bcg: #ffffff;
+    --logo-bcg: #ffffff;
+    --stat-bcg: #ffffff;
+    --list-bcg: #ffffff;
+    --stat-card-bottom: #000000;
+    --total-percent-color: #ffffff;
+    --tooltip-color: #000000;
+
+    --box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    --box-shadow-490: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --box-shadow-error: 0 2px 3px #ccc;
+    --box-shadow-tooltip: 0px 0px 4px #222;
+
+    --border-box-error: 1px solid #eee;
+
+    --backdrop-bcg: rgba(#000, .8);
+
+    --spinner-bcg: #ffffff;
+    --spinner-color: #28b9b5;
+}

@@ -1,0 +1,35 @@
+@import "../../../../style/abstracts/_mixins";
+.footer__svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  @include respma(490) {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  @include respma(350) {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+.footer__img {
+  transition: all .3s ease-out;
+  fill: var(--footer-header-color);
+  &:hover {
+    fill: rgba(#000000, .2);
+  }
+}
+.footer__icon {
+  margin-left: 0.625rem;
+}
+.footer__icon-facebook {
+  flex: 0 1 4.5%;
+  @include respma(1290) {
+    flex: 0 1 6.5%;
+  }
+  @include respma(1030) {
+    flex: 0 1 8%;
+  }
+  @include respma(490) {
+    flex: 0 1 20%;
+  }
+}

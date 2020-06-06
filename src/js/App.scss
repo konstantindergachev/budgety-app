@@ -1,0 +1,54 @@
+@import "../style/abstracts/_mixins";
+@import "../style/abstracts/_variables";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  @include respma(490) {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - var(--footer-height));
+  background-image: linear-gradient(rgba(gray, .075) 1px, transparent 1px), linear-gradient(90deg, rgba(gray, .075) 1px, transparent 1px),
+    linear-gradient(rgba(gray, .075) 1px, transparent 1px), linear-gradient(90deg, rgba(gray, .075) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem, 1.25rem 1.25rem;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+.error {
+  color: var(--error);
+  font-weight: 700;
+  &__page {
+    height: calc(100vh - var(--footer-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-img {
+      max-width: 18.75rem;
+      width: 100%;
+    }
+    &-title {
+      color: var(--error);
+      text-align: center;
+      margin-top: 0.625rem;
+    }
+  }
+  &__message {
+    @include center-position(50%);
+    font-weight: 700;
+    color: var(--error);
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../../style/abstracts/_mixins';
+.summary {
+  display: flex;
+  margin-bottom: 3.125rem;
+  @include respma(490) {
+    height: 10rem;
+    overflow-y: scroll;
+    margin-bottom: 0;
+  }
+  @include respma(350) {
+    height: 9.375rem;
+    margin-bottom: 0.625rem;
+  }
+  &__income,
+  &__expenses {
+    width: 50%;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__descr,
+  &__value {
+    width: 50%;
+  }
+  &__descr {
+    text-align: left;
+    margin-left: 10%;
+    color: var(--summary-text);
+  }
+  &__value {
+    text-align: right;
+    margin-right: 10%;
+    @include respma(490) {
+      font-size: 0.6875rem;
+      margin-right: 5%;
+    }
+  }
+  &__income {
+    color: var(--income);
+  }
+  &__expenses {
+    color: var(--expenses);
+  }
+}

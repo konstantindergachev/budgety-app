@@ -1,0 +1,25 @@
+@import '../../../../../style/abstracts/_mixins';
+.menu {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.625rem 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include respmi(500) {
+    display: none;
+  }
+
+  div {
+    width: 80%;
+    height: 0.1563rem;
+    background-color: var(--footer-header-color);
+    @include respmi(370) {
+      width: 90%;
+      height: 0.1875rem;
+    }
+  }
+}
