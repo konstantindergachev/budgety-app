@@ -3,7 +3,7 @@ import React from 'react';
 
 const Copyright = ({ data }) => (
   <h4 className="footer__copyright">
-    {data} &copy; {new Date().toISOString().split('-')[0]}
+    {data} &copy; {new Date().getFullYear()}
   </h4>
 );
 
